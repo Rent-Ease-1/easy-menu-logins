@@ -60,16 +60,17 @@ export function SiteHeader({ active = "Home" }: { active?: string }) {
           </button>
           <Link
             to="/login"
-            className="hidden items-center gap-1.5 rounded-lg border border-primary px-4 py-2 text-xs font-semibold text-primary transition-colors hover:bg-accent sm:flex sm:px-5 sm:text-sm"
+            className="hidden items-center gap-1.5 rounded-xl border border-primary/60 px-4 py-2.5 text-xs font-semibold text-primary shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary hover:bg-accent hover:shadow-md sm:flex sm:px-5 sm:text-sm"
           >
-            Sign In
+            <LogIn className="h-4 w-4" /> Sign In
           </Link>
           <Link
             to="/register"
-            className="flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90 sm:px-5 sm:text-sm"
+            className="flex items-center gap-1.5 rounded-xl bg-gradient-purple px-4 py-2.5 text-xs font-bold text-primary-foreground shadow-[var(--shadow-card)] transition-all hover:-translate-y-0.5 hover:opacity-95 hover:shadow-lg active:translate-y-0 sm:px-5 sm:text-sm"
           >
-            <User className="h-4 w-4" /> Sign Up
+            <UserPlus className="h-4 w-4" /> Sign Up
           </Link>
+
           <button
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((v) => !v)}
