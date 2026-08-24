@@ -81,37 +81,48 @@ export function SiteHeader({ active = "Home" }: { active?: string }) {
         </div>
       </div>
       {open && (
-        <nav className="border-t border-border bg-background px-4 py-3 lg:hidden">
+        <nav className="border-t border-border bg-background px-4 pb-4 pt-3 shadow-[var(--shadow-card)] lg:hidden">
           {navLinks.map((l) => (
             <Link
               key={l.label}
               to={l.to}
               onClick={() => setOpen(false)}
-              className={`block py-2.5 text-sm font-medium ${
-                l.label === active ? "text-primary" : "text-foreground"
+              className={`block rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
+                l.label === active
+                  ? "bg-accent text-primary"
+                  : "text-foreground hover:bg-accent/60 hover:text-primary"
               }`}
             >
               {l.label}
             </Link>
           ))}
-          <div className="mt-3 flex flex-col gap-2.5 border-t border-border pt-4 pb-2">
-            <Link
-              to="/login"
-              onClick={() => setOpen(false)}
-              className="flex items-center justify-center gap-2 rounded-xl border border-primary px-4 py-3 text-sm font-semibold text-primary transition-colors hover:bg-accent"
-            >
-              Sign In
-            </Link>
-            <Link
-              to="/register"
-              onClick={() => setOpen(false)}
-              className="flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-            >
-              <User className="h-4 w-4" /> Sign Up
-            </Link>
+          <div className="mt-4 rounded-2xl border border-primary/25 bg-accent/40 p-4">
+            <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+              Your account
+            </p>
+            <p className="mt-1 text-sm text-foreground">
+              Sign in to track applications, or create a free RentEaze account.
+            </p>
+            <div className="mt-4 flex flex-col gap-2.5">
+              <Link
+                to="/register"
+                onClick={() => setOpen(false)}
+                className="flex items-center justify-center gap-2 rounded-xl bg-gradient-purple px-4 py-3 text-sm font-bold text-primary-foreground shadow-md transition-all hover:opacity-95 active:scale-[0.99]"
+              >
+                <UserPlus className="h-4 w-4" /> Create Free Account
+              </Link>
+              <Link
+                to="/login"
+                onClick={() => setOpen(false)}
+                className="flex items-center justify-center gap-2 rounded-xl border border-primary bg-background px-4 py-3 text-sm font-semibold text-primary transition-colors hover:bg-accent"
+              >
+                <LogIn className="h-4 w-4" /> Sign In
+              </Link>
+            </div>
           </div>
         </nav>
       )}
+
     </header>
   );
 }
