@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { User, Menu, Bell, X } from "lucide-react";
+import { Menu, Bell, X, LogIn, UserPlus } from "lucide-react";
 import { useState } from "react";
 
 import logoWhite from "../assets/renteaze-logo-white.png";
