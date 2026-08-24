@@ -119,9 +119,8 @@ export function SiteHeader({ active = "Home" }: { active?: string }) {
                 <LogIn className="h-4 w-4 shrink-0" /> Sign In
               </Link>
             </div>
-
-            </div>
           </div>
+
         </nav>
       )}
 
