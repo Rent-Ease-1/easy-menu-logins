@@ -1,14 +1,20 @@
-# Welcome to your Lovable project
+# RentEaze: Your Next Home
+
+Ready to Find Your Next Home?
+Join thousands of Nigerians using RentEaze for a safer, simpler and smarter rental experience.
+Should be purple gradient and the get started button to the registration page 
+Menu for the header is looking too packed 
+Use the logo remove the search icon and remove the login button
 
 This project was built with [Lovable](https://lovable.dev).
 
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/8e9af706-2b57-4dc4-afc3-d1dd01fe817d).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +26,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
