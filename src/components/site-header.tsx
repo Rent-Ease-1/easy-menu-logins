@@ -103,23 +103,24 @@ export function SiteHeader({ active = "Home" }: { active?: string }) {
             <p className="mt-1 text-sm text-foreground">
               Sign in to track applications, or create a free RentEaze account.
             </p>
-            <div className="mt-4 flex flex-col gap-2.5">
+            <div className="mt-4 grid grid-cols-2 gap-2.5">
               <Link
                 to="/register"
                 onClick={() => setOpen(false)}
-                className="flex items-center justify-center gap-2 rounded-xl bg-gradient-purple px-4 py-3 text-sm font-bold text-primary-foreground shadow-md transition-all hover:opacity-95 active:scale-[0.99]"
+                className="flex items-center justify-center gap-1.5 rounded-xl bg-gradient-purple px-3 py-3 text-center text-sm font-bold text-primary-foreground shadow-md transition-all hover:opacity-95 active:scale-[0.99]"
               >
-                <UserPlus className="h-4 w-4" /> Create Free Account
+                <UserPlus className="h-4 w-4 shrink-0" /> Sign Up
               </Link>
               <Link
                 to="/login"
                 onClick={() => setOpen(false)}
-                className="flex items-center justify-center gap-2 rounded-xl border border-primary bg-background px-4 py-3 text-sm font-semibold text-primary transition-colors hover:bg-accent"
+                className="flex items-center justify-center gap-1.5 rounded-xl border border-primary bg-background px-3 py-3 text-center text-sm font-semibold text-primary transition-colors hover:bg-accent"
               >
-                <LogIn className="h-4 w-4" /> Sign In
+                <LogIn className="h-4 w-4 shrink-0" /> Sign In
               </Link>
             </div>
           </div>
+
         </nav>
       )}
 
